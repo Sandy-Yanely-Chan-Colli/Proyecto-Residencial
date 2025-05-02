@@ -1,0 +1,311 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .step {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .step.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+  }
+  
+  .service {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e9ecef;
+  }
+  
+  .service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service.selected {
+    background: #d4af37;
+    color: white;
+    border-color: #d4af37;
+  }
+  
+  .service img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+  
+  .service p {
+    margin: 0;
+    font-weight: 500;
+    color: inherit;
+  }
+  
+  button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  button:hover {
+    background-color: #c9a227;
+  }
+  
+  .progressContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .progressCircle {
+    width: 20px;
+    height: 20px;
+    background: #dee2e6;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .progressCircle.active {
+    background: #d4af37;
+  }
+  
+  .formList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  
+  .formList li {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #d4af37;
+    outline: none;
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .formActions button {
+    width: 48%;
+    margin: 0;
+  }
+  
+  .reportForm {
+    margin-top: 20px;
+  }
+  
+  .lostItemForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .formField label {
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .radioGroup label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .radioGroup input[type="radio"] {
+    width: auto;
+    margin: 0;
+  }
+  
+  .imagePreviewContainer {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .imagePreview {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    margin-top: 10px;
+  }
+  
+  .checkmarkContainer {
+    margin: 30px 0;
+  }
+  
+  .checkmarkSvg {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .circle {
+    stroke: #00C853;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 340;
+    stroke-dashoffset: 340;
+    animation: drawCircle 1s ease forwards;
+  }
+  
+  .checkmark {
+    stroke: #00C853;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: drawCheckmark 1s ease 1s forwards;
+  }
+  
+  @keyframes drawCircle {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes drawCheckmark {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services {
+      grid-template-columns: 1fr;
+    }
+  
+    .formActions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .formActions button {
+      width: 100%;
+    }
+  
+    .step {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .progressCircle {
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .service {
+      padding: 15px;
+    }
+  
+    .service img {
+      width: 50px;
+      height: 50px;
+    }
+  }
